@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Organizer</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Organizer ❤</h1>
+        <button onclick="showForm()">Add Recipe</button>
+        <input type="text" id="search" placeholder="Search by title or ingredient" onkeyup="searchRecipe()">
+        <div id="recipeList"></div>
+        <div id="recipeForm" style="display: none;">
+            <h2>Add/Edit Recipe</h2>
+            <input type="hidden" id="recipeId">
+            <input type="text" id="title" placeholder="Title">
+            <textarea id="ingredients" placeholder="Ingredients (comma separated)"></textarea>
+            <textarea id="instructions" placeholder="Instructions"></textarea>
+            <input type="text" id="category" placeholder="Category">
+            <input type="text" id="tags" placeholder="Tags (comma separated)">
+            <label><input type="checkbox" id="favorite"> Mark as Favorite</label>
+            <button onclick="saveRecipe()">Save</button>
+            <button onclick="hideForm()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
